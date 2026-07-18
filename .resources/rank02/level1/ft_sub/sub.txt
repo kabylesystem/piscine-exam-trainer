@@ -1,0 +1,10 @@
+Assignment name  : ft_sub
+Expected files   : ft_sub.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that returns the result of an arithmetic operation on its two integer parameters.
+
+Your function must be declared as follows:
+
+int	ft_sub(int a, int b);

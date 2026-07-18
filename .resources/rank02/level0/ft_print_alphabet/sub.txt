@@ -1,0 +1,11 @@
+Assignment name  : ft_print_alphabet
+Expected files   : ft_print_alphabet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that displays the alphabet in lowercase, on a single line, in
+ascending order, starting from 'a'.
+
+Your function must be declared as follows:
+
+void	ft_print_alphabet(void);

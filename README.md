@@ -1,15 +1,15 @@
-# 🏊 Piscine 42 - Exam Simulator
+# 🏊 Piscine 42 - Final Exam Simulator
 
-Un simulateur d'**exam de la Piscine 42** à lancer sur ton Mac (ou Linux). Il te met dans
-les mêmes conditions que le vrai exam : un sujet tombe, tu codes dans un dossier `rendu/`,
-tu tapes `test`, un correcteur compile ton code (`-Wall -Wextra -Werror`) et compare ta
-sortie à la solution de référence. `PASSED` ou `FAIL`, comme le jour J.
+Practice the **42 Piscine Final Exam** on your Mac (or Linux), in real conditions: a subject
+drops, you code in a `rendu/` folder, you type `test`, a grader compiles your code
+(`-Wall -Wextra -Werror`) and diffs your output against the reference. `PASSED` or `FAIL`,
+just like the real thing.
 
-Le pool d'exercices a été **curé** : les exos de **bit shift** ont été retirés, et tout ce
-qui ne tombe pas en piscine (rank 03+ du cursus, microshell, etc.) a été enlevé. Il reste
-les exos qui tombent vraiment, du warm-up jusqu'au niveau exam final.
+The pool is built from a **real campus Final Exam list** (the exercises that actually fall),
+levels 0 to 5, each exercise tagged as a **function (F)** or a **program (P)**. No bit-shift
+exercises (they do not fall on the piscine exam). **78 exercises, every one auto-graded.**
 
-## 🚀 Démarrage (le plus simple)
+## 🚀 Quick start
 
 ```bash
 git clone https://github.com/kabylesystem/piscine-exam-trainer.git
@@ -17,54 +17,38 @@ cd piscine-exam-trainer
 ./examshell
 ```
 
-C'est tout. Tu tombes sur le menu.
+Need a C compiler: on macOS run `xcode-select --install` once if prompted.
+For an environment identical to the real Linux exam: `./examshell --docker`.
 
-### Il te faut juste un compilateur C
+## 🎮 How it works
 
-- **macOS** : si `./examshell` râle qu'il manque un compilateur, lance une fois :
-  ```bash
-  xcode-select --install
-  ```
-  puis relance `./examshell`. (Le simulateur utilise `cc`/`clang` automatiquement si `gcc`
-  n'existe pas, c'est bon pour la piscine.)
-- **Linux** : `gcc` est en général déjà là (sinon installe `build-essential`).
+Main menu → **Piscine Exam** → pick a **mode**:
+- **Level Mode**: train level by level, pick the exercises you want.
+- **Real Exam Mode**: the timed run, level 0 → 5, you must pass to move on.
 
-## 🐧 Mode "identique au vrai exam" (Docker, optionnel)
+Then pick a **level**:
 
-Le vrai exam 42 tourne sous **Linux avec gcc**. Si tu veux exactement le même environnement
-(ou si le mode natif Mac fait un truc bizarre) :
+| Level | Theme | Examples |
+|-------|-------|----------|
+| **0** | Warm-up | hello, only_a, ft_putchar, ft_star, aff_a |
+| **1** | Functions | ft_strlen, ft_strcpy, ft_add, ft_swap, rev_int_tab |
+| **2** | Strings | rotone, ft_putnbr, ft_strdup, first_word, sort_int_tab |
+| **3** | Parsing | ft_atoi, ft_split, union, inter, alpha_mirror |
+| **4** | Full pool (bonus) | epur_str, ft_atoi_base, pgcd, ft_itoa, sort_list |
+| **5** | Boss | rpn_calc, brackets, biggest_pal, cycle_detector, ft_itoa_base |
 
-```bash
-./examshell --docker
-```
+A subject appears. Write your code in **`rendu/<exo>/<exo>.c`**, then type:
+- **`test`** → grade it   ·   **`next`** → next exercise   ·   **`menu`** / **`exit`**
 
-Ça construit un petit conteneur Linux (gcc + outils) la première fois (~1 min) puis te lance
-dedans. Ton dossier `rendu/` reste sur ton Mac, tu vois ton code normalement. Il faut avoir
-**Docker Desktop** installé et lancé.
+## ⚠️ Exam survival rules
 
-## 🎮 Comment ça marche
+- Your code must compile with **`-Wall -Wextra -Werror`**: one warning = a fail.
+- Output must match **exactly** (the trailing `\n` counts, check with `| cat -e`).
+- Infinite loop = **TIMEOUT** after 10s.
 
-1. Menu principal → **Piscine Exam** → choisis un **mode** :
-   - **Level Mode** : tu pratiques niveau par niveau, tu piques les exos que tu veux.
-   - **Real Exam Mode** : le vrai enchaînement chronométré, level 0 → 3, faut tout passer.
-2. Choisis un **niveau** :
-   - 🌱 **Level00** : warm-up (Exam 00 bébé : hello, only_a, aff_first_param...)
-   - ⭐ **Level0** : fondations (rotone, ft_strcpy, fizzbuzz...)
-   - 🔥 **Level1** : intermédiaire (ft_atoi, ft_strdup, inter, union...)
-   - 💎 **Level2** : avancé (epur_str, ft_atoi_base, str_capitalizer...)
-   - 🏆 **Level3** : niveau exam final (ft_split, sort_list, ft_itoa, rostring...)
-3. Un sujet s'affiche. Écris ton code dans **`rendu/<exo>/<exo>.c`** (ouvre le repo dans ton
-   éditeur, le fichier est déjà créé et vide).
-4. Dans le shell, tape :
-   - **`test`** → te faire corriger (compile + diff avec la référence)
-   - **`next`** → exo suivant
-   - **`menu`** → retour menu (sauvegarde ton rendu dans `trace/`)
-   - **`exit`** → quitter
+## 🌐 Web version
 
-## ⚠️ Règles de survie (comme au vrai exam)
+A browser version (pick a mission, code, compile & run in the page) lives in `web/`.
+It is deployed here: see the link in the repo description.
 
-- Ton code doit compiler en **`-Wall -Wextra -Werror`** : un warning = un fail.
-- La sortie doit être **exactement** celle attendue (le `\n` final compte, teste avec `| cat -e`).
-- Une boucle infinie = **TIMEOUT** après 10s.
-
-Bon courage. 🐦‍⬛
+Good luck. 🐦‍⬛

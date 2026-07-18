@@ -1,0 +1,11 @@
+Assignment name  : ft_putchar
+Expected files   : ft_putchar.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that displays the character passed as parameter on the
+standard output.
+
+Your function must be declared as follows:
+
+void	ft_putchar(char c);

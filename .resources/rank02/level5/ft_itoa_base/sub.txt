@@ -1,0 +1,8 @@
+Assignment name  : ft_itoa_base
+Expected files   : ft_itoa_base.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+
+Write a function char *ft_itoa_base(int value, int base) that converts an integer to a malloc'd null-terminated string in the given base (2 to 16, digits 0-9 then A-F). In base 10 a negative value is preceded by '-'; in any other base value is treated as unsigned.
+
+    char	*ft_itoa_base(int value, int base);

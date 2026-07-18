@@ -1,0 +1,10 @@
+Assignment name  : ft_star
+Expected files   : ft_star.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that displays seven '*' characters on a single line, followed by a newline. It is also known as seven_star.
+
+Your function must be declared as follows:
+
+void	ft_star(void);

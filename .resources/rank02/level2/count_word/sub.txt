@@ -1,0 +1,6 @@
+Assignment name  : count_word
+Expected files   : count_word.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays its number of words followed by a newline. A word is a sequence of characters delimited by spaces or tabs, or by the start/end of the string. If the number of arguments is not 1, the program displays a newline.

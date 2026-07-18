@@ -1,0 +1,10 @@
+Assignment name  : ft_add
+Expected files   : ft_add.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that returns the result of an arithmetic operation on its two integer parameters.
+
+Your function must be declared as follows:
+
+int	ft_add(int a, int b);

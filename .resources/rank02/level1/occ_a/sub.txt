@@ -1,0 +1,6 @@
+Assignment name  : occ_a
+Expected files   : occ_a.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays the number of times the character 'a' appears in it, followed by a newline. If the number of arguments is not 1, the program displays a newline.

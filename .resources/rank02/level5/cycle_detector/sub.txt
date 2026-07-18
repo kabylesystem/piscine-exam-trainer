@@ -1,0 +1,8 @@
+Assignment name  : cycle_detector
+Expected files   : cycle_detector.c
+Allowed functions: malloc, free
+--------------------------------------------------------------------------------
+
+Create a function cycle_detector(const t_list *list) that returns 1 if the linked list contains a cycle, otherwise 0. t_list is { int data; struct s_list *next; } from list.h (provided).
+
+    int	cycle_detector(const t_list *list)

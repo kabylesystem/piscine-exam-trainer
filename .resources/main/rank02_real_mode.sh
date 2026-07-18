@@ -31,8 +31,8 @@ start_exam() {
     echo "=================================================="
     sleep 1
 
-    for level in 0 1 2 3; do
-        mkdir -p ../../rendu 
+    for level in 0 1 2 3 4 5; do
+        mkdir -p ../../rendu
         run_level $level
     done
 

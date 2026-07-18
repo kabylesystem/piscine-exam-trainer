@@ -1,0 +1,9 @@
+Assignment name  : biggest_pal
+Expected files   : biggest_pal.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and prints the biggest palindrome inside it, followed by a newline. Lowercase only. On a tie in length, print the last one. If there is not exactly 1 argument, print only a newline.
+
+$> biggest_pal "abcba"
+abcba

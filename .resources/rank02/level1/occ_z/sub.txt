@@ -1,0 +1,6 @@
+Assignment name  : occ_z
+Expected files   : occ_z.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays the number of times the character 'z' appears in it, followed by a newline. If the number of arguments is not 1, the program displays a newline.

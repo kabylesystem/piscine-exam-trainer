@@ -1,0 +1,10 @@
+Assignment name  : ft_dec
+Expected files   : ft_dec.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that decrements by one the value pointed to by its parameter.
+
+Your function must be declared as follows:
+
+void	ft_dec(int *nbr);

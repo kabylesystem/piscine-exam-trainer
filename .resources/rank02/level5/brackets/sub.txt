@@ -1,0 +1,11 @@
+Assignment name  : brackets
+Expected files   : brackets.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes an undefined number of strings in arguments. For each argument, print "OK" if the expression is correctly bracketed, otherwise "Error", followed by a newline. Brackets are (), [], {}. Other symbols are ignored. A string with no bracket is OK. If there are no arguments, print only a newline.
+
+$> ./brackets '(johndoe)' | cat -e
+OK$
+$> ./brackets '([)]' | cat -e
+Error$

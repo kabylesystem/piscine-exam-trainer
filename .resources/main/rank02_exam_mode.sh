@@ -13,20 +13,23 @@ subject_file="/tmp/.current_subject_${rank}_${level}"
 # Define subject pool using case statement instead of associative array
 get_subjects() {
     case "$level" in
-        level00)
-            echo "hello ft_countdown only_a only_z maff_alpha aff_first_param aff_last_param"
-            ;;
         level0)
-            echo "first_word fizzbuzz ft_putstr ft_strcpy ft_strlen ft_swap repeat_alpha rev_print rot_13 rotone search_and_replace ulstr"
+            echo "aff_a aff_z ft_countdown ft_print_alphabet ft_print_numbers ft_print_reverse_alphabet ft_putchar ft_star hello maff_alpha maff_revalpha only_a only_z"
             ;;
         level1)
-            echo "alpha_mirror camel_to_snake do_op ft_atoi ft_strcmp ft_strrev ft_strcspn ft_strdup inter is_power_of_2 last_word max snake_to_camel union wdmatch"
+            echo "ft_add ft_dec ft_mul ft_putstr ft_strcmp ft_strcpy ft_strlen ft_sub ft_swap occ_a occ_z rev_int_tab"
             ;;
         level2)
-            echo "add_prime_sum epur_str expand_str ft_list_size ft_atoi_base ft_range ft_rrange hidenp lcm paramsum pgcd print_hex rstr_capitalizer str_capitalizer tab_mult"
+            echo "aff_first_param aff_last_param count_word first_word fizzbuzz ft_putnbr ft_strdup repeat_alpha rev_print rot_13 rotone search_and_replace sort_int_tab ulstr"
             ;;
         level3)
-            echo "flood_fill fprime ft_itoa ft_split rev_wstr rostring ft_list_foreach sort_int_tab sort_list ft_list_remove_if"
+            echo "alpha_mirror ft_atoi ft_split inter last_word union"
+            ;;
+        level4)
+            echo "add_prime_sum do_op epur_str expand_str flood_fill fprime ft_atoi_base ft_itoa ft_list_foreach ft_list_remove_if ft_list_size ft_range ft_rrange ft_strrev hidenp is_power_of_2 lcm max paramsum pgcd print_hex rev_wstr rostring rstr_capitalizer sort_list str_capitalizer tab_mult wdmatch"
+            ;;
+        level5)
+            echo "biggest_pal brackets cycle_detector ft_itoa_base rpn_calc"
             ;;
         *)
             echo ""
@@ -46,6 +49,7 @@ pick_new_subject() {
 prepare_subject() {
     mkdir -p "$base_dir/../../rendu/$chosen"
     touch "$base_dir/../../rendu/$chosen/$chosen.c"
+    cp "$base_dir/../$rank/$level/$chosen/"*.h "$base_dir/../../rendu/$chosen/" 2>/dev/null
 
     cd "$base_dir/../$rank/$level/$chosen" || {
         echo -e "${RED}Subject folder not found.${RESET}"
