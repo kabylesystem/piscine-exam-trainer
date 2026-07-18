@@ -1,0 +1,11 @@
+Assignment name  : brackets
+Expected files   : brackets.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend un nombre indéfini de chaînes en arguments. Pour chaque argument, imprimez "OK" si l'expression est correctement parenthésée, sinon "Error", suivi d'un saut de ligne. Les parenthèses sont (), [], {}. Les autres symboles sont ignorés. Une chaîne sans parenthèse est considérée comme OK. S'il n'y a pas d'arguments, imprimez uniquement un saut de ligne.
+
+$> ./brackets '(johndoe)' | cat -e
+OK$
+$> ./brackets '([)]' | cat -e
+Error$

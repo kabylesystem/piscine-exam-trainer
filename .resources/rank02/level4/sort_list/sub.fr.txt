@@ -1,0 +1,32 @@
+Assignment name  : sort_list  
+Expected files   : sort_list.c  
+Allowed functions:  
+--------------------------------------------------------------------------------  
+Écrivez les fonctions suivantes :  
+
+t_list	*sort_list(t_list* lst, int (*cmp)(int, int));  
+
+Cette fonction doit trier la liste donnée en paramètre, en utilisant le pointeur de fonction cmp pour sélectionner l'ordre à appliquer, et retourne un pointeur vers le premier élément de la liste triée.  
+
+Les duplications doivent rester.  
+Les entrées seront toujours cohérentes.  
+
+Vous devez utiliser le type t_list décrit dans le fichier list.h qui vous est fourni. Vous devez inclure ce fichier (#include "list.h"), mais vous ne devez pas le soumettre. Nous utiliserons le nôtre pour compiler votre devoir.  
+
+Les fonctions passées en tant que cmp retourneront toujours une valeur différente de 0 si a et b sont dans le bon ordre, 0 sinon.  
+
+Par exemple, la fonction suivante utilisée comme cmp triera la liste dans l'ordre croissant :  
+
+int ascending(int a, int b)  
+{  
+	return (a <= b);  
+}  
+FICHIER LIST.H :  
+
+typedef struct s_list t_list;  
+
+struct s_list {  
+    int data;  
+    t_list *next;  
+};  
+VOUS DEVEZ TESTER AVEC VOTRE FICHIER LIST.H JUSTE POUR CE SHELL.

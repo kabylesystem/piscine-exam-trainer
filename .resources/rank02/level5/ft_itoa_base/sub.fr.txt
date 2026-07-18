@@ -1,0 +1,8 @@
+Assignment name  : ft_itoa_base  
+Expected files   : ft_itoa_base.c  
+Allowed functions: malloc  
+--------------------------------------------------------------------------------  
+
+Écrivez une fonction char *ft_itoa_base(int value, int base) qui convertit un entier en une chaîne de caractères allouée dynamiquement et terminée par un caractère nul dans la base donnée (de 2 à 16, chiffres 0-9 puis A-F). En base 10, une valeur négative est précédée de '-'; dans toute autre base, la valeur est traitée comme non signée.  
+
+    char	*ft_itoa_base(int value, int base);

@@ -1,0 +1,8 @@
+Assignment name  : cycle_detector  
+Expected files   : cycle_detector.c  
+Allowed functions: malloc, free  
+--------------------------------------------------------------------------------  
+
+Créez une fonction cycle_detector(const t_list *list) qui retourne 1 si la liste chaînée contient un cycle, sinon 0. t_list est { int data; struct s_list *next; } de list.h (fourni).  
+
+    int	cycle_detector(const t_list *list)

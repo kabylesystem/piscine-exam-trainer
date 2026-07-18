@@ -118,7 +118,7 @@ function Home({ cat, cleared, onPick }: { cat: Catalog; cleared: Set<string>; on
         <div className="hero-text">
           <h1 className="title">READY,<br /><span style={{ color: "var(--green)" }}>PISCINER?</span></h1>
           <p className="tagline">The 42 piscine exam : pick a mission, write C, hit run. <span style={{ color: "var(--green)" }}>PASS</span> or <span style={{ color: "var(--red)" }}>FAIL</span>.</p>
-          <p className="tagline-sub">No install. That runs in any browser, phone included. Enjoy bro</p>
+          <p className="tagline-sub">Runs in any browser, phone included. Enjoy bro</p>
         </div>
         <img className="hero-mascot" src="mascot.png" alt="" aria-hidden="true" />
       </section>

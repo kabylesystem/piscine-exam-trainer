@@ -1,0 +1,9 @@
+Assignment name  : rpn_calc  
+Expected files   : rpn_calc.c  
+Allowed functions: atoi, printf, write, malloc, free  
+--------------------------------------------------------------------------------  
+
+Évaluez une équation en notation polonaise inversée donnée comme premier argument et imprimez le résultat suivi d'un saut de ligne. Opérateurs : + - * / %. Opérandes/opérateurs séparés par des espaces. Si l'argument est invalide ou s'il n'y a pas exactement un argument, imprimez "Error".  
+
+$> ./rpn_calc "1 2 * 3 * 4 +" | cat -e  
+10$

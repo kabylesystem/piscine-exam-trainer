@@ -61,17 +61,24 @@ while true; do
 
     while true; do
         clear
+        if [ "$(cat /tmp/.pe_lang 2>/dev/null)" = "fr" ] && [ -f sub.fr.txt ]; then subject=$(cat sub.fr.txt); else subject=$(cat sub.txt); fi
         echo -e "${WHITE}$subject${RESET}"
         echo
         echo -e "${GREEN}${BOLD}>> Write your code in:${RESET} rendu/${shuffled[$i]}/${shuffled[$i]}.c ${CYAN}(open this file in your editor, then come back)${RESET}"
         echo
-        echo "Please type 'test' to test code, 'next' for next or 'exit' for exit."
+        echo "Type 'test' to test, 'next' for next, 'fr'/'en' for language, 'exit' to quit."
         echo
         read -rp "/>" input
         case $input in
             next)
                 i=$((i+1))
                 break
+                ;;
+            fr)
+                echo fr > /tmp/.pe_lang
+                ;;
+            en)
+                echo en > /tmp/.pe_lang
                 ;;
             test)
                 clear

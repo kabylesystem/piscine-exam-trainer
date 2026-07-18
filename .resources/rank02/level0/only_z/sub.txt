@@ -3,4 +3,5 @@ Expected files   : only_z.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Write a program that displays a 'z' character on the standard output.
+Write a program that displays a 'z' character followed by a newline on the
+standard output.

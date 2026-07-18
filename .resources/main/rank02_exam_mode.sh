@@ -59,11 +59,11 @@ prepare_subject() {
     clear
     echo -e "${CYAN}${BOLD}Your subject: $chosen${RESET}"
     echo "=================================================="
-    cat sub.txt
+    if [ "$(cat /tmp/.pe_lang 2>/dev/null)" = "fr" ] && [ -f sub.fr.txt ]; then cat sub.fr.txt; else cat sub.txt; fi
     echo
     echo -e "=================================================="
     echo -e "${GREEN}${BOLD}>> Write your code in:${RESET} rendu/$chosen/$chosen.c ${CYAN}(open this file in your editor, then come back)${RESET}"
-    echo -e "${YELLOW}Type 'test' to test your code, 'next' to get a new question, or 'exit' to quit.${RESET}"
+    echo -e "${YELLOW}Type 'test', 'next' for a new question, 'fr'/'en' for language, or 'exit'.${RESET}"
 }
 
 # Initial subject selection
@@ -101,6 +101,14 @@ while true; do
             echo -e "${BLUE}🔄 Picking a new subject...${RESET}"
             pick_new_subject
             chosen=$(cat "$subject_file")
+            prepare_subject
+            ;;
+        fr)
+            echo fr > /tmp/.pe_lang
+            prepare_subject
+            ;;
+        en)
+            echo en > /tmp/.pe_lang
             prepare_subject
             ;;
         exit)

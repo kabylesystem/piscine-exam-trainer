@@ -1,0 +1,10 @@
+Assignment name  : ft_star  
+Expected files   : ft_star.c  
+Allowed functions: write  
+--------------------------------------------------------------------------------  
+
+Écrivez une fonction qui affiche sept caractères '*' sur une seule ligne, suivis d'un saut de ligne. On l'appelle également seven_star.  
+
+Votre fonction doit être déclarée comme suit :  
+
+void	ft_star(void);

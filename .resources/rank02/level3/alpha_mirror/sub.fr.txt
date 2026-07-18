@@ -1,0 +1,25 @@
+Assignment name  : alpha_mirror  
+Expected files   : alpha_mirror.c  
+Allowed functions: write  
+--------------------------------------------------------------------------------  
+
+Écrivez un programme appelé alpha_mirror qui prend une chaîne et affiche cette chaîne après avoir remplacé chaque caractère alphabétique par son caractère alphabétique opposé, suivi d'un saut de ligne.  
+
+'a' devient 'z', 'Z' devient 'A'  
+'d' devient 'w', 'M' devient 'N'  
+
+et ainsi de suite.  
+
+La casse n'est pas modifiée.  
+
+Si le nombre d'arguments n'est pas 1, affichez uniquement un saut de ligne.  
+
+Exemples :  
+
+$>./alpha_mirror "abc"  
+zyx  
+$>./alpha_mirror "My horse is Amazing." | cat -e  
+Nb slihv rh Znzarmt.$  
+$>./alpha_mirror | cat -e  
+$  
+$>

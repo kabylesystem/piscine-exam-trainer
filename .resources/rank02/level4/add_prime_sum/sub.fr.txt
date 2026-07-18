@@ -1,0 +1,20 @@
+Assignment name  : add_prime_sum  
+Expected files   : add_prime_sum.c  
+Allowed functions: write, exit  
+--------------------------------------------------------------------------------  
+
+Écrivez un programme qui prend un entier positif en argument et affiche la somme de tous les nombres premiers inférieurs ou égaux à cet entier, suivie d'un saut de ligne.  
+
+Si le nombre d'arguments n'est pas 1, ou si l'argument n'est pas un nombre positif, affichez simplement 0 suivi d'un saut de ligne.  
+
+Oui, les exemples sont corrects.  
+
+Examples:  
+
+$>./add_prime_sum 5  
+10  
+$>./add_prime_sum 7 | cat -e  
+17$  
+$>./add_prime_sum | cat -e  
+0$  
+$>

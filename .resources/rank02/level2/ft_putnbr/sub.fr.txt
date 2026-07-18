@@ -1,0 +1,10 @@
+Assignment name  : ft_putnbr  
+Expected files   : ft_putnbr.c  
+Allowed functions: write  
+--------------------------------------------------------------------------------  
+
+Écrivez une fonction qui affiche le nombre passé en paramètre. La fonction doit pouvoir afficher des nombres négatifs.  
+
+Votre fonction doit être déclarée comme suit :  
+
+void	ft_putnbr(int nb);

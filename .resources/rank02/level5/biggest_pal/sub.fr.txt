@@ -1,0 +1,9 @@
+Assignment name  : biggest_pal
+Expected files   : biggest_pal.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend une chaîne de caractères et imprime le plus grand palindrome qu'elle contient, suivi d'un saut de ligne. En minuscules uniquement. En cas d'égalité de longueur, imprimez le dernier. S'il n'y a pas exactement 1 argument, imprimez uniquement un saut de ligne.
+
+$> biggest_pal "abcba"
+abcba

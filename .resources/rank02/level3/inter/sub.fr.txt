@@ -1,0 +1,21 @@
+Assignment name  : inter
+Expected files   : inter.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend deux chaînes de caractères et affiche, sans doublons, les caractères qui apparaissent dans les deux chaînes, dans l'ordre où ils apparaissent dans la première.
+
+L'affichage sera suivi d'un \n.
+
+Si le nombre d'arguments n'est pas 2, le programme affiche \n.
+
+Exemples :
+
+$>./inter "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
+padinto$
+$>./inter ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6ewg4$
+$>./inter "rien" "cette phrase ne cache rien" | cat -e
+rien$
+$>./inter | cat -e
+$

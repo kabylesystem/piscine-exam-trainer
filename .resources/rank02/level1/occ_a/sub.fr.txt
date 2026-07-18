@@ -1,0 +1,6 @@
+Assignment name  : occ_a
+Expected files   : occ_a.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend une chaîne de caractères et affiche le nombre de fois que le caractère 'a' y apparaît, suivi d'un saut de ligne. Si le nombre d'arguments n'est pas 1, le programme affiche un saut de ligne.

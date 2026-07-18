@@ -1,0 +1,6 @@
+Assignment name  : count_word
+Expected files   : count_word.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend une chaîne de caractères et affiche le nombre de mots qu'elle contient, suivi d'un saut de ligne. Un mot est une séquence de caractères délimitée par des espaces ou des tabulations, ou par le début/fin de la chaîne. Si le nombre d'arguments n'est pas 1, le programme affiche un saut de ligne.

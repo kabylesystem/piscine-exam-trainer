@@ -1,0 +1,10 @@
+Assignment name  : ft_putchar  
+Expected files   : ft_putchar.c  
+Allowed functions: write  
+--------------------------------------------------------------------------------  
+
+Écrivez une fonction qui affiche le caractère passé en paramètre sur la sortie standard.  
+
+Votre fonction doit être déclarée comme suit :  
+
+void	ft_putchar(char c);

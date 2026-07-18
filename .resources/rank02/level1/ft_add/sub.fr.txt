@@ -1,0 +1,10 @@
+Assignment name  : ft_add  
+Expected files   : ft_add.c  
+Allowed functions: None  
+--------------------------------------------------------------------------------  
+
+Écrivez une fonction qui retourne le résultat d'une opération arithmétique sur ses deux paramètres entiers.  
+
+Votre fonction doit être déclarée comme suit :  
+
+int	ft_add(int a, int b);
