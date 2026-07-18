@@ -46,9 +46,25 @@ A subject appears. Write your code in **`rendu/<exo>/<exo>.c`**, then type:
 - Output must match **exactly** (the trailing `\n` counts, check with `| cat -e`).
 - Infinite loop = **TIMEOUT** after 10s.
 
-## 🌐 Web version
+## 🌐 Web version (no install, plays in the browser)
 
-A browser version (pick a mission, code, compile & run in the page) lives in `web/`.
-It is deployed here: see the link in the repo description.
+**Live: https://piscine.46.225.146.226.sslip.io**
+
+An 8-bit browser version: pick a mission, write C, compile & run right in the page,
+PASS or FAIL. Levels 0 to 5, fun mission names, progress saved locally. The in-page
+compiler uses the free Wandbox API with the real exam flags (`-std=gnu17 -Wall -Wextra -Werror`).
+Source in `web/`.
+
+### Run the web version locally
+```bash
+cd web
+npm install
+npm run dev
+```
+
+### Deploy to Vercel
+Import this repo in Vercel, set **Root Directory** to `web/` (framework auto-detects as Vite),
+deploy. To rebuild the exercise catalog after changing the trainer:
+`python3 web/tools/gen_catalog.py > web/public/catalog.json && python3 web/tools/merge_funnames.py web/public/catalog.json`.
 
 Good luck. 🐦‍⬛
