@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.local
 _*.mjs
+.vercel

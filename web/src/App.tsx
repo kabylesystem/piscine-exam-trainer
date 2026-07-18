@@ -115,8 +115,8 @@ function Home({ cat, cleared, onPick }: { cat: Catalog; cleared: Set<string>; on
   return (
     <main className="page">
       <section className="hero">
-        <h1 className="title">42 PISCINE<br /><span style={{ color: "var(--green)" }}>EXAM SIMULATOR</span></h1>
-        <p className="tagline">Pick a mission. Write C. Compile & run. <span style={{ color: "var(--green)" }}>PASS</span> or <span style={{ color: "var(--red)" }}>FAIL</span>.</p>
+        <h1 className="title">READY,<br /><span style={{ color: "var(--green)" }}>PISCINER?</span></h1>
+        <p className="tagline">The 42 piscine exam, arcade style. Pick a mission, write C, hit run. <span style={{ color: "var(--green)" }}>PASS</span> or <span style={{ color: "var(--red)" }}>FAIL</span>.</p>
       </section>
       <section className="grid levels">
         {LEVELS.map((l) => {

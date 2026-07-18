@@ -34,11 +34,11 @@
 .crumb .pix { font-size: 13px; }
 button.tiny { font-size: 8px; padding: 8px 10px; }
 
-.mission-card { text-align: left; padding: 14px; display: flex; flex-direction: column; gap: 6px; min-height: 118px; }
+.mission-card { text-align: left; padding: 14px; display: flex; flex-direction: column; gap: 6px; min-height: 122px; overflow: hidden; }
 .mission-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 rgba(0,0,0,0.5); color: inherit; border-color: var(--cyan); }
-.mc-top { display: flex; gap: 6px; margin-bottom: 4px; }
-.mc-fun { font-family: var(--pixel); font-size: 12px; line-height: 1.5; color: var(--ink); }
-.mc-name { font-family: var(--term); font-size: 18px; margin-top: auto; }
+.mc-top { display: flex; gap: 6px; margin-bottom: 4px; flex-wrap: wrap; }
+.mc-fun { font-family: var(--pixel); font-size: 11px; line-height: 1.55; color: var(--ink); overflow-wrap: anywhere; }
+.mc-name { font-family: var(--term); font-size: 16px; margin-top: auto; overflow-wrap: anywhere; word-break: break-all; line-height: 1.15; opacity: 0.7; }
 
 .mission .mtitle { font-size: 15px; }
 .mission .mname { font-family: var(--term); font-size: 19px; }

@@ -48,7 +48,7 @@ A subject appears. Write your code in **`rendu/<exo>/<exo>.c`**, then type:
 
 ## 🌐 Web version (no install, plays in the browser)
 
-**Live: https://piscine.46.225.146.226.sslip.io**
+**Live: https://piscine-exe.vercel.app**
 
 An 8-bit browser version: pick a mission, write C, compile & run right in the page,
 PASS or FAIL. Levels 0 to 5, fun mission names, progress saved locally. The in-page
