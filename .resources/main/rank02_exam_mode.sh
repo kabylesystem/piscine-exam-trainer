@@ -62,6 +62,7 @@ prepare_subject() {
     cat sub.txt
     echo
     echo -e "=================================================="
+    echo -e "${GREEN}${BOLD}>> Write your code in:${RESET} rendu/$chosen/$chosen.c ${CYAN}(open this file in your editor, then come back)${RESET}"
     echo -e "${YELLOW}Type 'test' to test your code, 'next' to get a new question, or 'exit' to quit.${RESET}"
 }
 

@@ -11,7 +11,8 @@ export interface Exercise {
   type: "F" | "P";   // Function or Program
   hot: boolean;      // falls most often on the exam
   allowed: string;   // allowed functions
-  subject: string;   // full subject text
+  subject: string;   // full subject text (EN)
+  subject_fr?: string; // French translation of the subject
   harness: string;   // main.c for F exercises, "" for P
   headers: Record<string, string>; // e.g. list.h
   sig: string;       // exact function signature for F exercises (from the reference)

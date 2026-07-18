@@ -51,6 +51,13 @@ button.tiny { font-size: 8px; padding: 8px 10px; }
 .pane-h { font-size: 10px; padding: 12px 14px; border-bottom: 3px solid var(--line); display: flex; align-items: center; justify-content: space-between; background: var(--panel-2); }
 .pane-actions { display: flex; gap: 8px; align-items: center; }
 
+.lang-toggle { display: flex; gap: 4px; }
+.lang-btn { font-family: var(--pixel); font-size: 8px; padding: 5px 7px; box-shadow: none; border: 2px solid var(--line-2); background: transparent; color: var(--ink-dim); }
+.lang-btn:hover:not(:disabled) { color: var(--cyan); border-color: var(--cyan); }
+.lang-btn.on { color: #06210f; background: var(--green); border-color: var(--green); }
+.lang-btn:active { transform: none; box-shadow: none; }
+.lang-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
 .subject-text { margin: 0; padding: 16px 18px; overflow: auto; flex: 1; font-family: var(--term); font-size: 19px; line-height: 1.4; white-space: pre-wrap; color: var(--ink); }
 
 .editor-pane { min-height: 0; }

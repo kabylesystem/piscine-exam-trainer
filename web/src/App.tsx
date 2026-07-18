@@ -189,6 +189,8 @@ function Mission({ cat, name, cleared, onBack, onCleared, onNext }: {
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState<RunResult | null>(null);
   const [flash, setFlash] = useState<"none" | "pass" | "fail">("none");
+  const [lang, setLang] = useState<"en" | "fr">(() => (localStorage.getItem("pe_lang") as "en" | "fr") || "en");
+  useEffect(() => { localStorage.setItem("pe_lang", lang); }, [lang]);
 
   useEffect(() => {
     setCode(localStorage.getItem(codeKey(name)) || starterFor(ex));
@@ -233,8 +235,14 @@ function Mission({ cat, name, cleared, onBack, onCleared, onNext }: {
 
       <div className="split">
         <section className="pane subject box">
-          <div className="pane-h pix">Subject</div>
-          <pre className="subject-text">{ex.subject}</pre>
+          <div className="pane-h pix">
+            <span>Subject</span>
+            <span className="lang-toggle">
+              <button className={"lang-btn" + (lang === "en" ? " on" : "")} onClick={() => setLang("en")}>EN</button>
+              <button className={"lang-btn" + (lang === "fr" ? " on" : "")} onClick={() => setLang("fr")} disabled={!ex.subject_fr} title={ex.subject_fr ? "" : "FR not available"}>FR</button>
+            </span>
+          </div>
+          <pre className="subject-text">{lang === "fr" && ex.subject_fr ? ex.subject_fr : ex.subject}</pre>
         </section>
 
         <section className="pane editor-pane box">

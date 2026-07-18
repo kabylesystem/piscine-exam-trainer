@@ -63,6 +63,8 @@ while true; do
         clear
         echo -e "${WHITE}$subject${RESET}"
         echo
+        echo -e "${GREEN}${BOLD}>> Write your code in:${RESET} rendu/${shuffled[$i]}/${shuffled[$i]}.c ${CYAN}(open this file in your editor, then come back)${RESET}"
+        echo
         echo "Please type 'test' to test code, 'next' for next or 'exit' for exit."
         echo
         read -rp "/>" input
