@@ -115,8 +115,12 @@ function Home({ cat, cleared, onPick }: { cat: Catalog; cleared: Set<string>; on
   return (
     <main className="page">
       <section className="hero">
-        <h1 className="title">READY,<br /><span style={{ color: "var(--green)" }}>PISCINER?</span></h1>
-        <p className="tagline">The 42 piscine exam, arcade style. Pick a mission, write C, hit run. <span style={{ color: "var(--green)" }}>PASS</span> or <span style={{ color: "var(--red)" }}>FAIL</span>.</p>
+        <div className="hero-text">
+          <h1 className="title">READY,<br /><span style={{ color: "var(--green)" }}>PISCINER?</span></h1>
+          <p className="tagline">The 42 piscine exam, arcade style. Pick a mission, write C, hit run. <span style={{ color: "var(--green)" }}>PASS</span> or <span style={{ color: "var(--red)" }}>FAIL</span>.</p>
+          <p className="tagline-sub">No install. Runs in any browser, phone included. 📱</p>
+        </div>
+        <img className="hero-mascot" src="mascot.png" alt="" aria-hidden="true" />
       </section>
       <section className="grid levels">
         {LEVELS.map((l) => {
