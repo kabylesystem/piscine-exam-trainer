@@ -1,0 +1,91 @@
+/* ===== Fonts (self-hosted, 8-bit, distinctive) ===== */
+@font-face { font-family: "Press Start 2P"; src: url("/fonts/pressstart.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "VT323"; src: url("/fonts/vt323.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Departure Mono"; src: url("/fonts/DepartureMono-Regular.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --bg: #0b0d12;
+  --panel: #14171f;
+  --panel-2: #1b1f2b;
+  --line: #262b38;
+  --line-2: #333b4d;
+  --ink: #d6dcea;
+  --ink-dim: #7b8399;
+  --green: #5bffa0;
+  --green-deep: #16351f;
+  --red: #ff5c6c;
+  --red-deep: #3a1620;
+  --cyan: #57c7ff;
+  --lilac: #a78bfa;
+
+  --pixel: "Press Start 2P", monospace;
+  --term: "VT323", monospace;
+  --code: "Departure Mono", ui-monospace, monospace;
+
+  --lvl0: #5bffa0;
+  --lvl1: #57c7ff;
+  --lvl2: #4d8bff;
+  --lvl3: #a78bfa;
+  --lvl4: #ff9e64;
+  --lvl5: #ff5c6c;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--term);
+  font-size: 20px;
+  line-height: 1.35;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.18) 3px);
+  mix-blend-mode: multiply;
+}
+
+.pix { font-family: var(--pixel); text-transform: uppercase; letter-spacing: 0.5px; }
+.dim { color: var(--ink-dim); }
+h1, h2, h3 { font-family: var(--pixel); font-weight: normal; margin: 0; }
+::selection { background: var(--cyan); color: #06202f; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line-2); border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+
+.box { background: var(--panel); border: 3px solid var(--line-2); box-shadow: 6px 6px 0 rgba(0,0,0,0.5); }
+
+button {
+  font-family: var(--pixel); font-size: 11px; text-transform: uppercase;
+  color: var(--ink); background: var(--panel-2); border: 3px solid var(--line-2);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.55); padding: 12px 16px; cursor: pointer;
+  transition: transform .03s, box-shadow .03s, background .1s, color .1s; image-rendering: pixelated;
+}
+button:hover { color: var(--cyan); border-color: var(--cyan); }
+button:active { transform: translate(4px, 4px); box-shadow: 0 0 0 rgba(0,0,0,0); }
+button:disabled { opacity: .4; cursor: not-allowed; transform: none; box-shadow: 4px 4px 0 rgba(0,0,0,0.55); }
+button.primary { color: #06210f; background: var(--green); border-color: var(--green); }
+button.primary:hover { color: #06210f; filter: brightness(1.1); }
+button.ghost { box-shadow: none; border-color: var(--line); background: transparent; }
+button.ghost:hover { border-color: var(--cyan); }
+
+.chip {
+  font-family: var(--pixel); font-size: 8px; text-transform: uppercase;
+  padding: 4px 6px; border: 2px solid var(--line-2); color: var(--ink-dim); white-space: nowrap;
+}
+.chip.f { color: var(--cyan); border-color: var(--cyan); }
+.chip.p { color: var(--green); border-color: var(--green); }
+.chip.hot { color: var(--red); border-color: var(--red); }
+.chip.done { color: var(--green); border-color: var(--green); background: var(--green-deep); }
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
