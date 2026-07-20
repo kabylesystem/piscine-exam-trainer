@@ -3,7 +3,7 @@ import CodeMirror from "@uiw/react-codemirror";
 import { cpp } from "@codemirror/lang-cpp";
 import { oneDark } from "@codemirror/theme-one-dark";
 import type { Catalog, Exercise } from "./types";
-import { grade, type RunResult } from "./wandbox";
+import { grade, type RunResult } from "./godbolt";
 import "./theme.css";
 import "./app.css";
 
