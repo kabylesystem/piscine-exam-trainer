@@ -11,3 +11,8 @@ It works much like the standard atoi(const char *str) function, see the man.
 Your function must be declared as follows:
 
 int	ft_atoi(const char *str);
+
+NOTE - this is the EXAM version of ft_atoi, not the one from the piscine days.
+Here you handle ONE optional leading '+' or '-' sign, then the digits, and you
+stop at the first non-digit character. You do NOT have to handle several signs
+in a row like "---+--1234" - that requirement belongs to the days' version.

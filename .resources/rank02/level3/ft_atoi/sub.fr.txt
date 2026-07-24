@@ -9,4 +9,6 @@ Elle fonctionne de manière similaire à la fonction standard atoi(const char *s
 
 Votre fonction doit être déclarée comme suit :  
 
-int	ft_atoi(const char *str);
+int	ft_atoi(const char *str);  
+
+REMARQUE - il s'agit de la version EXAM de ft_atoi, pas de celle des jours de piscine. Ici, vous gérez UN signe '+' ou '-' optionnel en tête, puis les chiffres, et vous vous arrêtez au premier caractère non numérique. Vous n'avez PAS à gérer plusieurs signes consécutifs comme "---+--1234" - cette exigence appartient à la version des jours.
